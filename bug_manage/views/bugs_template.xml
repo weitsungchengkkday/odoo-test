@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="bugs_template" name="bugs">
+        <div class="container">
+            <h3>還沒還沒還沒關閉的Bug</h3>
+            <t t-foreach="bugs_open" t-as="bug">
+                <div class="row">
+                    <span t-field="bug.name"/>
+                </div>
+                <div class="row">
+                    <span t-field="bug.detail"/>
+                </div>
+            </t>
+        </div>
+    </template>
+</odoo>
+

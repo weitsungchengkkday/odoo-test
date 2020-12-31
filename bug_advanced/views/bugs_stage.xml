@@ -1,0 +1,28 @@
+
+<odoo>
+    <data>
+        <!-- explicit list view definition -->
+        <record model="ir.ui.view" id="bug_advanced.bug_stage_kanban">
+            <field name="name">任務階段看板</field>
+            <field name="model">bm.bug.stage</field>
+            <field name="arch" type="xml">
+                <kanban> 
+                    <field name="name">bug_kanban</field>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_card">
+                                <a type="open">
+                                    <field name="name"/>
+                                    <field name="status"/>
+                                    <field name="bug_ids"/> 
+                                </a>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban> 
+            </field>
+        </record>
+
+    </data>
+
+</odoo>

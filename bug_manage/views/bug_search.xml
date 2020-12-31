@@ -1,0 +1,17 @@
+<odoo>
+    <data>
+        <!-- bug list view -->
+        <record model="ir.ui.view" id="bug_manage.bug_searchTT">
+            <field name="name">Bug Search</field>
+            <field name="model">bm.bug</field>
+            <field name="arch" type="xml">
+              <search>
+                <field name="name" />
+                <field name="is_closed" />
+                <field name="user_id" />
+              </search>
+            </field>
+        </record>
+
+    </data>
+</odoo>

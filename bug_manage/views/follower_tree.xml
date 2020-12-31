@@ -1,0 +1,18 @@
+<odoo>
+    <data>
+
+        <!-- follower form view -->
+        <record model="ir.ui.view" id="bug_manage.follower_tree" >
+            <field name="name">關注者列表2</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_tree" />
+            <field name="arch" type="xml">
+                <field name="active" position="after">
+                    <field name="bug_ids" />
+                </field>
+            </field>
+        </record>
+        
+    </data>
+</odoo>
+

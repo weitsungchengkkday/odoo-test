@@ -1,0 +1,40 @@
+<odoo>
+    <data>
+        <!-- actions opening views on models -->
+        <record model="ir.actions.act_window" id="bug_manage.bug_action_window">
+            <field name="name">bug_manage 視窗</field>
+            <field name="res_model">bm.bug</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Top menu item -->
+        <menuitem name="bug 管理系統" id="bug_manage.menu_root" />
+        <!-- menu 1 item -->
+        <menuitem name="bug 管理" id="bug_manage.menu_1"
+                  parent="bug_manage.menu_root" />
+        <!-- menu 1-1 item -->
+        <menuitem name="bug 列表" id="bug_manage.menu_1_list"
+                  parent="bug_manage.menu_1"
+                  action="bug_manage.bug_action_window" />
+
+
+        <!-- 動作定義:follower -->
+        <record model="ir.actions.act_window" id="bug_manage.follower_action_window">
+            <field name="name">follower 視窗</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="bug_manage.follower_tree"/>
+        </record>
+
+        <!-- menu 2:follower -->
+        <menuitem name="關注者ㄉ管理" id="bug_manage.menu_2"
+                  parent="bug_manage.menu_root" />
+        <!-- menu 2-1:follower -->
+        <menuitem name="關注者ㄉ列表" id="bug_manage.menu_2_list"
+                  parent="bug_manage.menu_2"
+                  action="bug_manage.follower_action_window" />
+    </data>
+</odoo>
+
+
+
